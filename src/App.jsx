@@ -1,17 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "@/context/AuthContext";
-import { Navbar } from "@/components/shared/Navbar";
+import { AuthProvider } from "@/context/AuthContext";;
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "@/pages/HomePage";
 import { ProductPage } from "@/pages/ProductPage";
 import { AuthPage } from "@/pages/AuthPage";
 import ShopPage from "./pages/ShopPage";
+import { Navbar } from "./components/shared/NavBar";
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Navbar />
+        <Navbar/>
         <main className="container py-8">
           <Routes>
             <Route path="/" element={<HomePage />} />
